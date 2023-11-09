@@ -1,0 +1,1838 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-utah-12-21-2022__patch2-hotfix2-05-08-2023_05-09-2023_1540.zip</compiler_build>
+        <copied_from>c0cf809cc7c70010d665ffc603c26042</copied_from>
+        <copied_from_name>Hardware Asset Disposal flow</copied_from_name>
+        <description>Standard flow to dispose hardware assets</description>
+        <internal_name>hardware_asset_disposal_flowcustom</internal_name>
+        <label_cache>[{"name":"d66fe200-82c8-4ec9-93d5-e8ce38b6ad6c.scheduled_end_date_time","label":"20➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"d66fe200-82c8-4ec9-93d5-e8ce38b6ad6c.total_duration","label":"20➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"d0e8bf94-5395-4dd3-8462-e7e027c14dc8.scheduled_end_date_time","label":"17➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"d0e8bf94-5395-4dd3-8462-e7e027c14dc8.total_duration","label":"17➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"5bc42d79-9a0e-46c8-9108-9f63d22e976e.scheduled_end_date_time","label":"14➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"5bc42d79-9a0e-46c8-9108-9f63d22e976e.total_duration","label":"14➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Created_1.current.sys_domain","label":"Trigger➛Hardware Disposal Order Record➛Domain","reference":"sys_user_group","reference_display":"Group","type":"domain_id","base_type":"domain_id","parent_table_name":"sn_hamp_hardware_disposal","column_name":"sys_domain"},{"name":"c5a8f616-5d57-4a2d-9705-5bb691d9b954.scheduled_end_date_time","label":"12➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"c5a8f616-5d57-4a2d-9705-5bb691d9b954.total_duration","label":"12➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"bd23dc3e-7fc9-4297-8a72-b1e46e971335.table_name","label":"2.1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bd23dc3e-7fc9-4297-8a72-b1e46e971335.record","label":"2.1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.assigned_to","label":"Trigger➛Hardware Disposal Order Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_hamp_hardware_disposal","column_name":"assigned_to"},{"name":"690f228f-00d5-409c-99e9-817ed2173041.Record.state","label":"5➛Hardware Disposal Tasks Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"sn_hamp_hw_asset_disposal_task","column_name":"state"},{"name":"60158a56-b7e1-4a9d-a5c3-cd86c03634a3.item","label":"10➛Attachment Record","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"c066e1b7-ead1-479e-98d7-91f1d9d27c74.parameter1","label":"9➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c066e1b7-ead1-479e-98d7-91f1d9d27c74.parameter","label":"9➛Attachment Records","reference":"sys_attachment","reference_display":"Attachment","type":"records","base_type":"records","attributes":{"uiType":"records","uiTypeLabel":"Records","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"21759cd9-ab84-457f-be34-e1da3f20a42c.Record.state","label":"1➛Hardware Disposal Tasks Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"sn_hamp_hw_asset_disposal_task","column_name":"state"},{"name":"c7235358-f75f-49b4-8a09-861d0cff7ae4.table_name","label":"4➛Hardware Disposal Order Table","reference":"sn_hamp_hardware_disposal","reference_display":"Hardware Disposal Order","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7235358-f75f-49b4-8a09-861d0cff7ae4.record","label":"4➛Hardware Disposal Order Record","reference":"sn_hamp_hardware_disposal","reference_display":"Hardware Disposal Order","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"690f228f-00d5-409c-99e9-817ed2173041.Table","label":"5➛Hardware Disposal Tasks Table","reference":"sn_hamp_hw_asset_disposal_task","reference_display":"Hardware Disposal Tasks","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"690f228f-00d5-409c-99e9-817ed2173041.Record","label":"5➛Hardware Disposal Tasks Record","reference":"sn_hamp_hw_asset_disposal_task","reference_display":"Hardware Disposal Tasks","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b1e4f13-4505-4f3c-9f0d-46c917da4938.Table","label":"3➛Hardware Disposal Tasks Table","reference":"sn_hamp_hw_asset_disposal_task","reference_display":"Hardware Disposal Tasks","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b1e4f13-4505-4f3c-9f0d-46c917da4938.Record","label":"3➛Hardware Disposal Tasks Record","reference":"sn_hamp_hw_asset_disposal_task","reference_display":"Hardware Disposal Tasks","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.stage","label":"Trigger➛Hardware Disposal Record➛Stage","reference":"","reference_display":"Stage","type":"choice","base_type":"choice","parent_table_name":"sn_hamp_hardware_disposal","column_name":"stage"},{"name":"Created_1.current","label":"Trigger➛Hardware Disposal Order Record","reference":"sn_hamp_hardware_disposal","reference_display":"Hardware Disposal Order","type":"reference","base_type":"reference","attributes":{}},{"name":"21759cd9-ab84-457f-be34-e1da3f20a42c.Table","label":"1➛Hardware Disposal Tasks Table","reference":"sn_hamp_hw_asset_disposal_task","reference_display":"Hardware Disposal Tasks","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"21759cd9-ab84-457f-be34-e1da3f20a42c.Record","label":"1➛Hardware Disposal Tasks Record","reference":"sn_hamp_hw_asset_disposal_task","reference_display":"Hardware Disposal Tasks","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"31e031df-9dfd-4a89-8074-77d85584cd64.Record","label":"7➛Hardware Disposal Tasks Record","reference":"sn_hamp_hw_asset_disposal_task","reference_display":"Hardware Disposal Tasks","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"31e031df-9dfd-4a89-8074-77d85584cd64.Table","label":"7➛Hardware Disposal Tasks Table","reference":"sn_hamp_hw_asset_disposal_task","reference_display":"Hardware Disposal Tasks","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ff46533c-6d94-4f12-a74b-933cf7e3c604.Record","label":"8➛Hardware Disposal Tasks Record","reference":"sn_hamp_hw_asset_disposal_task","reference_display":"Hardware Disposal Tasks","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ff46533c-6d94-4f12-a74b-933cf7e3c604.Table","label":"8➛Hardware Disposal Tasks Table","reference":"sn_hamp_hw_asset_disposal_task","reference_display":"Hardware Disposal Tasks","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e7e384d0-89bc-4d93-81c1-7caca33d8fb6.record","label":"6➛Hardware Disposal Order Record","reference":"sn_hamp_hardware_disposal","reference_display":"Hardware Disposal Order","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e7e384d0-89bc-4d93-81c1-7caca33d8fb6.table_name","label":"6➛Hardware Disposal Order Table","reference":"sn_hamp_hardware_disposal","reference_display":"Hardware Disposal Order","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b207eaeb-5872-41a8-aec9-99ee056babb2.record","label":"8➛Hardware Disposal Order Record","reference":"sn_hamp_hardware_disposal","reference_display":"Hardware Disposal Order","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b207eaeb-5872-41a8-aec9-99ee056babb2.table_name","label":"8➛Hardware Disposal Order Table","reference":"sn_hamp_hardware_disposal","reference_display":"Hardware Disposal Order","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3ea7a24a-94be-4da9-a79b-cb16816e9358.record","label":"11➛Hardware Disposal Order Record","reference":"sn_hamp_hardware_disposal","reference_display":"Hardware Disposal Order","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3ea7a24a-94be-4da9-a79b-cb16816e9358.table_name","label":"11➛Hardware Disposal Order Table","reference":"sn_hamp_hardware_disposal","reference_display":"Hardware Disposal Order","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92f45aa4-b0b6-4272-bc25-c9f3df7b7abc.Records","label":"10➛Records","reference_display":"Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92f45aa4-b0b6-4272-bc25-c9f3df7b7abc.Table","label":"10➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92f45aa4-b0b6-4272-bc25-c9f3df7b7abc.Count","label":"10➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"552c154e-c742-416d-8e4a-f1990e454783.Records","label":"10➛Records","reference_display":"Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"552c154e-c742-416d-8e4a-f1990e454783.Table","label":"10➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"552c154e-c742-416d-8e4a-f1990e454783.Count","label":"10➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e5aba365-f495-44de-8e59-196c9b100235.parameter","label":"10➛Attachment Records","reference":"sys_attachment","reference_display":"Attachment","type":"records","base_type":"records","attributes":{"uiTypeLabel":"Records","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"records"}},{"name":"e5aba365-f495-44de-8e59-196c9b100235.parameter1","label":"10➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer"}},{"name":"4e67023f-6570-4209-875d-7ad4e7c3aecc.Record","label":"10➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4e67023f-6570-4209-875d-7ad4e7c3aecc.Table","label":"10➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1f80b41f-f8df-41e5-b383-10f0529f600b.parameter","label":"10➛Attachment Records","reference":"sys_attachment","reference_display":"Attachment","type":"records","base_type":"records","attributes":{"uiType":"records","uiTypeLabel":"Records","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1f80b41f-f8df-41e5-b383-10f0529f600b.parameter1","label":"10➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bf85b749-9401-479b-8c78-834e6011c8f2.item","label":"10➛Attachment Record","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"eee95cf5-0786-4a39-88ae-b7fb1c4c294a.record","label":"12➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"eee95cf5-0786-4a39-88ae-b7fb1c4c294a.table_name","label":"12➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5170e969-a663-43f0-ad0b-e791f6156a70.record","label":"2.1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5170e969-a663-43f0-ad0b-e791f6156a70.table_name","label":"2.1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2b1e4f13-4505-4f3c-9f0d-46c917da4938.Record.state","label":"3➛Hardware Disposal Tasks Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"sn_hamp_hw_asset_disposal_task","column_name":"state"}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Hardware Asset Disposal flow-Custom</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de672ea6589631107f44271dc5726e5d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Hardware Asset Disposal flow-Custom</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="HAM Configuration" source="x_snc_ham_configur">29942962589231107f44271dc5726ebc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_update_name>sys_hub_flow_de672ea6589631107f44271dc5726e5d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=de672ea6589631107f44271dc5726e5d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=de672ea6589631107f44271dc5726e5d"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=de672ea6589631107f44271dc5726e5d^sys_idNOT INb2672ea6589631107f44271dc5726efb"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment>Trigger flow when hardware disposal record is created</comment>
+        <display_text/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>b2672ea6589631107f44271dc5726efb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b2672ea6589631107f44271dc5726efb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>b2672ea6589631107f44271dc5726efb</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>76672ea6589631107f44271dc5726efc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <value>sn_hamp_hardware_disposal</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>b2672ea6589631107f44271dc5726efb</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>b2672ea6589631107f44271dc5726efc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=de672ea6589631107f44271dc5726e5d^sys_idNOT IN32676ea6589631107f44271dc5726e0b,32676ea6589631107f44271dc5726e0c,36676ea6589631107f44271dc5726e0b,3a676ea6589631107f44271dc5726e0b,3e676ea6589631107f44271dc5726e0a,3e676ea6589631107f44271dc5726e0b,b2676ea6589631107f44271dc5726e0b,b6676ea6589631107f44271dc5726e0b,ba676ea6589631107f44271dc5726e0a,ba676ea6589631107f44271dc5726e0b,be676ea6589631107f44271dc5726e0a,be676ea6589631107f44271dc5726e0b,f2676ea6589631107f44271dc5726e0a"/>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>4</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Transit</label>
+        <order>2</order>
+        <stage_id>1b95357c-02de-4ed1-8928-4215ded8164e</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>32676ea6589631107f44271dc5726e0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>standard</type>
+        <value>in_transit</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>false</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id>2f3bb67c-bf65-447c-bcaa-58c8b2019248</ancestor_stage_id>
+        <ancestral_if_else_logic/>
+        <component_indexes>19</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Set current stage state to:  [Error]</label>
+        <order>0</order>
+        <stage_id>96d17be5-5675-458f-a7f4-06f777051349</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>32676ea6589631107f44271dc5726e0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>error</type>
+        <value>Set current stage state to:  [Error]</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>false</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id>aca4b607-b8cb-4dee-a35c-8ed241f65e5e</ancestor_stage_id>
+        <ancestral_if_else_logic/>
+        <component_indexes/>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Set current stage state to:  [Error]</label>
+        <order>0</order>
+        <stage_id>50c9139d-124b-45cb-88d4-86e834852e5e</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>36676ea6589631107f44271dc5726e0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>error</type>
+        <value>Set current stage state to:  [Error]</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>2</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Scheduling</label>
+        <order>1</order>
+        <stage_id>aca4b607-b8cb-4dee-a35c-8ed241f65e5e</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>3a676ea6589631107f44271dc5726e0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>standard</type>
+        <value>scheduled</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>false</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id>1b95357c-02de-4ed1-8928-4215ded8164e</ancestor_stage_id>
+        <ancestral_if_else_logic/>
+        <component_indexes>13</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Set current stage state to:  [Error]</label>
+        <order>0</order>
+        <stage_id>825eab22-0d57-4a24-82af-73cd230b185b</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>3e676ea6589631107f44271dc5726e0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>error</type>
+        <value>Set current stage state to:  [Error]</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>false</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id>2f3bb67c-bf65-447c-bcaa-58c8b2019248</ancestor_stage_id>
+        <ancestral_if_else_logic/>
+        <component_indexes/>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Set current stage state to:  [Error]</label>
+        <order>0</order>
+        <stage_id>7f4de5a1-06fb-435f-8331-826c509e8337</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>3e676ea6589631107f44271dc5726e0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>error</type>
+        <value>Set current stage state to:  [Error]</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>0</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Draft</label>
+        <order>0</order>
+        <stage_id>2f3bb67c-bf65-447c-bcaa-58c8b2019248</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>b2676ea6589631107f44271dc5726e0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>standard</type>
+        <value>draft</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>false</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id>2f3bb67c-bf65-447c-bcaa-58c8b2019248</ancestor_stage_id>
+        <ancestral_if_else_logic/>
+        <component_indexes/>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Set current stage state to:  [Error]</label>
+        <order>0</order>
+        <stage_id>31ec6fcb-1de7-4477-9c12-6323ab7ebd46</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>b6676ea6589631107f44271dc5726e0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>error</type>
+        <value>Set current stage state to:  [Error]</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>6</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Confirmation</label>
+        <order>3</order>
+        <stage_id>303d8322-813a-4552-9b94-29230039f4c0</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>ba676ea6589631107f44271dc5726e0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>standard</type>
+        <value>pending_certificate</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>false</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id>aca4b607-b8cb-4dee-a35c-8ed241f65e5e</ancestor_stage_id>
+        <ancestral_if_else_logic/>
+        <component_indexes>16</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Set current stage state to:  [Error]</label>
+        <order>0</order>
+        <stage_id>b15666e5-6d25-49e5-8824-fe2741ef7314</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>ba676ea6589631107f44271dc5726e0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>error</type>
+        <value>Set current stage state to:  [Error]</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>14,17,20</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Cancelled</label>
+        <order>6</order>
+        <stage_id>d858dd5c-8f52-485a-8982-8d1ff8d9e84a</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>be676ea6589631107f44271dc5726e0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>standard</type>
+        <value>cancelled</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>11</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Completed</label>
+        <order>5</order>
+        <stage_id>8153a466-0949-4e14-9f23-ce993c71f3c6</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>be676ea6589631107f44271dc5726e0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>standard</type>
+        <value>completed</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>7</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <label>Documentation</label>
+        <order>4</order>
+        <stage_id>b5058645-724c-4820-b71f-2c6d51e3e816</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>f2676ea6589631107f44271dc5726e0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <type>standard</type>
+        <value>documentation</value>
+    </sys_hub_flow_stage>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=de672ea6589631107f44271dc5726e5d^sys_idNOT IN1a672ea6589631107f44271dc5726e6c"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>de672ea6589631107f44271dc5726e5d</id>
+        <name>Hardware Asset Disposal flow-Custom</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:03</sys_created_on>
+        <sys_id>1a672ea6589631107f44271dc5726e6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:03</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=1a672ea6589631107f44271dc5726e6c"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=de672ea6589631107f44271dc5726e5d^sys_idNOT IN1a672ea6589631107f44271dc5726e75,52672ea6589631107f44271dc5726e7a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</model>
+        <model_id>de672ea6589631107f44271dc5726e5d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_de672ea6589631107f44271dc5726e5d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:03</sys_created_on>
+        <sys_id>1a672ea6589631107f44271dc5726e75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</model>
+        <model_id>de672ea6589631107f44271dc5726e5d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_de672ea6589631107f44271dc5726e5d</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:03</sys_created_on>
+        <sys_id>52672ea6589631107f44271dc5726e7a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=de672ea6589631107f44271dc5726e5d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=de672ea6589631107f44271dc5726e5d"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=de672ea6589631107f44271dc5726e5d^sys_idNOT IN2e672ea6589631107f44271dc5726eca,66672ea6589631107f44271dc5726ee0,6a672ea6589631107f44271dc5726ed2,ea672ea6589631107f44271dc5726ed9,fa672ea6589631107f44271dc5726eee,fa672ea6589631107f44271dc5726ef8,fe672ea6589631107f44271dc5726ee6"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment>Verify Assets</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>2e672ea6589631107f44271dc5726eca</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>21759cd9-ab84-457f-be34-e1da3f20a42c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2e672ea6589631107f44271dc5726eca"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2e672ea6589631107f44271dc5726eca</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>6a672ea6589631107f44271dc5726ecd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>sn_hamp_hw_asset_disposal_task</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2e672ea6589631107f44271dc5726eca</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>a6672ea6589631107f44271dc5726ecd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait">ff3a6335531003003bf1d9109ec58777</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2e672ea6589631107f44271dc5726eca"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>2e672ea6589631107f44271dc5726eca</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>26672ea6589631107f44271dc5726ecd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>task_name=verify^hardware_disposal={{Created_1.current}}^short_description=Verify the assets planned for disposal^description=Verify the planned assets in the related list using verify UI action. Please close the task after verification.^assigned_to={{Created_1.current.assigned_to}}^sys_domain={{Created_1.current.sys_domain}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>2e672ea6589631107f44271dc5726eca</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>62672ea6589631107f44271dc5726ecd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait</field>
+        <id>2e672ea6589631107f44271dc5726eca</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>ae672ea6589631107f44271dc5726ecc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2e672ea6589631107f44271dc5726eca"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2e672ea6589631107f44271dc5726eca"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment>Vendor Confirmation</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <order>7</order>
+        <parent_ui_id>d43a59ee-1e55-4df8-a429-2f0361367da8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>66672ea6589631107f44271dc5726ee0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>31e031df-9dfd-4a89-8074-77d85584cd64</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=66672ea6589631107f44271dc5726ee0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>66672ea6589631107f44271dc5726ee0</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>62672ea6589631107f44271dc5726ee2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>sn_hamp_hw_asset_disposal_task</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>66672ea6589631107f44271dc5726ee0</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>ae672ea6589631107f44271dc5726ee1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait">ff3a6335531003003bf1d9109ec58777</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=66672ea6589631107f44271dc5726ee0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>66672ea6589631107f44271dc5726ee0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>2e672ea6589631107f44271dc5726ee1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>hardware_disposal={{Created_1.current}}^task_name=confirm^short_description=Confirmation from vendor^description=Please close the task after receiving confirmation from vendor.^assigned_to={{Created_1.current.assigned_to}}^sys_domain={{Created_1.current.sys_domain}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>66672ea6589631107f44271dc5726ee0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>6a672ea6589631107f44271dc5726ee1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait</field>
+        <id>66672ea6589631107f44271dc5726ee0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>a6672ea6589631107f44271dc5726ee1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=66672ea6589631107f44271dc5726ee0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=66672ea6589631107f44271dc5726ee0"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment>Schedule Pickup</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <order>3</order>
+        <parent_ui_id>67d88db8-e4e0-4ae0-978b-7a39c518a001</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>6a672ea6589631107f44271dc5726ed2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>2b1e4f13-4505-4f3c-9f0d-46c917da4938</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6a672ea6589631107f44271dc5726ed2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6a672ea6589631107f44271dc5726ed2</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>6e672ea6589631107f44271dc5726ed4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>sn_hamp_hw_asset_disposal_task</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6a672ea6589631107f44271dc5726ed2</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>aa672ea6589631107f44271dc5726ed4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait">ff3a6335531003003bf1d9109ec58777</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6a672ea6589631107f44271dc5726ed2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>6a672ea6589631107f44271dc5726ed2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>2a672ea6589631107f44271dc5726ed4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>hardware_disposal={{Created_1.current}}^task_name=schedule^short_description=Provide Vendor, Vendor order ID, Scheduled date and Pickup contact name^description=Provide Vendor, Vendor order ID and Scheduled date on the Hardware disposal request. Please close the task after scheduling.^assigned_to={{Created_1.current.assigned_to}}^sys_domain={{Created_1.current.sys_domain}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>6a672ea6589631107f44271dc5726ed2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>66672ea6589631107f44271dc5726ed4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait</field>
+        <id>6a672ea6589631107f44271dc5726ed2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>a2672ea6589631107f44271dc5726ed4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6a672ea6589631107f44271dc5726ed2^sys_idNOT IN6a672ea6589631107f44271dc5726ed3"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>wait</input_name>
+        <instance>6a672ea6589631107f44271dc5726ed2</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"wait":{"scriptActive":false,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nvar scheduled_date \u003d fd_data.trigger.current.scheduled_date;\nvar vendor \u003d fd_data.trigger.current.vendor;\nvar vendorOrderId \u003d fd_data.trigger.current.vendor_order_id;\n\nif (scheduled_date \u0026\u0026 vendor \u0026\u0026 vendorOrderId)\n    return false;\nelse\n    return true;"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>6a672ea6589631107f44271dc5726ed3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6a672ea6589631107f44271dc5726ed2"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment>Asset Departure</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <order>5</order>
+        <parent_ui_id>a97ceb9a-1e64-4149-ae80-ad3e89caea1e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>ea672ea6589631107f44271dc5726ed9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>690f228f-00d5-409c-99e9-817ed2173041</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ea672ea6589631107f44271dc5726ed9"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ea672ea6589631107f44271dc5726ed9</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>26672ea6589631107f44271dc5726edb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait">ff3a6335531003003bf1d9109ec58777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ea672ea6589631107f44271dc5726ed9</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>e6672ea6589631107f44271dc5726edb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>sn_hamp_hw_asset_disposal_task</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ea672ea6589631107f44271dc5726ed9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>ea672ea6589631107f44271dc5726ed9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>a2672ea6589631107f44271dc5726edb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>task_name=depart^hardware_disposal={{Created_1.current}}^short_description=Select the assets departuring for disposal^description=Select the verified assets for departure in the related list using depart UI action. Please close the task after selecting the assets for departure. Departed assets cannot be removed from the hardware disposal order.  Allocations of the departing assets will be retired. Assets will be removed from exisiting contracts.^assigned_to={{Created_1.current.assigned_to}}^sys_domain={{Created_1.current.sys_domain}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>ea672ea6589631107f44271dc5726ed9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>ee672ea6589631107f44271dc5726eda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait</field>
+        <id>ea672ea6589631107f44271dc5726ed9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>2e672ea6589631107f44271dc5726eda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ea672ea6589631107f44271dc5726ed9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ea672ea6589631107f44271dc5726ed9"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Attachments on Record">082e70db0f4273003788001ea8767e02</action_type>
+        <action_type_parent display_value="Get Attachments on Record">31de959973c93300a3942ea3c4f6a774</action_type_parent>
+        <comment>Get attachments on Disposal Documentation task</comment>
+        <compiled_snapshot>082e70db0f4273003788001ea8767e02</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <order>9</order>
+        <parent_ui_id>d43a59ee-1e55-4df8-a429-2f0361367da8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>fa672ea6589631107f44271dc5726eee</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <ui_id>c066e1b7-ead1-479e-98d7-91f1d9d27c74</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fa672ea6589631107f44271dc5726eee"/>
+    <sys_element_mapping action="delete_multiple" query="id=fa672ea6589631107f44271dc5726eee"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>source_record</field>
+        <id>fa672ea6589631107f44271dc5726eee</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>fe672ea6589631107f44271dc5726eef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_082e70db0f4273003788001ea8767e02</table>
+        <value>{{ff46533c-6d94-4f12-a74b-933cf7e3c604.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fa672ea6589631107f44271dc5726eee"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fa672ea6589631107f44271dc5726eee"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Copy Attachment">30fe6cdb0f973300dfd3694e68767e5a</action_type>
+        <action_type_parent display_value="Copy Attachment">95849c2a9353130079b5925cf67ffb91</action_type_parent>
+        <comment>Copy disposal documents to hardware disposal request</comment>
+        <compiled_snapshot>30fe6cdb0f973300dfd3694e68767e5a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <order>11</order>
+        <parent_ui_id>60158a56-b7e1-4a9d-a5c3-cd86c03634a3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>fa672ea6589631107f44271dc5726ef8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <ui_id>1f9bcbcb-241f-4857-8505-26601399e1bf</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fa672ea6589631107f44271dc5726ef8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>fa672ea6589631107f44271dc5726ef8</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>3e672ea6589631107f44271dc5726efa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <value>sn_hamp_hardware_disposal</value>
+        <variable display_value="Table">f4fe6cdb0f973300dfd3694e68767e67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>fa672ea6589631107f44271dc5726ef8</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>7a672ea6589631107f44271dc5726efa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <value/>
+        <variable display_value="Target Record">b0fe6cdb0f973300dfd3694e68767e60</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fa672ea6589631107f44271dc5726ef8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachment_record</field>
+        <id>fa672ea6589631107f44271dc5726ef8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>f6672ea6589631107f44271dc5726efa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_30fe6cdb0f973300dfd3694e68767e5a</table>
+        <value>{{60158a56-b7e1-4a9d-a5c3-cd86c03634a3.item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>fa672ea6589631107f44271dc5726ef8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>36672ea6589631107f44271dc5726efa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_30fe6cdb0f973300dfd3694e68767e5a</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>target_record</field>
+        <id>fa672ea6589631107f44271dc5726ef8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>72672ea6589631107f44271dc5726efa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_30fe6cdb0f973300dfd3694e68767e5a</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fa672ea6589631107f44271dc5726ef8"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fa672ea6589631107f44271dc5726ef8"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment>Disposal Documentation</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <order>8</order>
+        <parent_ui_id>d43a59ee-1e55-4df8-a429-2f0361367da8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>fe672ea6589631107f44271dc5726ee6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>ff46533c-6d94-4f12-a74b-933cf7e3c604</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fe672ea6589631107f44271dc5726ee6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>fe672ea6589631107f44271dc5726ee6</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>3a672ea6589631107f44271dc5726ee8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait">ff3a6335531003003bf1d9109ec58777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>fe672ea6589631107f44271dc5726ee6</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:05</sys_created_on>
+        <sys_id>fa672ea6589631107f44271dc5726ee8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:05</sys_updated_on>
+        <value>sn_hamp_hw_asset_disposal_task</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fe672ea6589631107f44271dc5726ee6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>fe672ea6589631107f44271dc5726ee6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>b6672ea6589631107f44271dc5726ee8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>hardware_disposal={{Created_1.current}}^task_name=documentation^short_description=Attach Disposal report and certificates of data destruction^description=Attach Disposal report and certificates of data destruction. Select the departed assets which are disposed in the related list using dispose UI action. Please close the task after selecting the disposed assets.^assigned_to={{Created_1.current.assigned_to}}^sys_domain={{Created_1.current.sys_domain}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>fe672ea6589631107f44271dc5726ee6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>f2672ea6589631107f44271dc5726ee8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait</field>
+        <id>fe672ea6589631107f44271dc5726ee6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>32672ea6589631107f44271dc5726ee8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fe672ea6589631107f44271dc5726ee6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fe672ea6589631107f44271dc5726ee6"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=de672ea6589631107f44271dc5726e5d"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=de672ea6589631107f44271dc5726e5d^sys_idNOT IN22672ea6589631107f44271dc5726ea5,22672ea6589631107f44271dc5726ebd,26672ea6589631107f44271dc5726eaa,5e672ea6589631107f44271dc5726e7e,62672ea6589631107f44271dc5726eb6,6a672ea6589631107f44271dc5726eba,6e672ea6589631107f44271dc5726ea1,aa672ea6589631107f44271dc5726eb3,e2672ea6589631107f44271dc5726e83,e2672ea6589631107f44271dc5726eb1,e6672ea6589631107f44271dc5726ebf,ea672ea6589631107f44271dc5726eac,ee672ea6589631107f44271dc5726e9e,ee672ea6589631107f44271dc5726ec3"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">6e672ea6589631107f44271dc5726ea4</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>d43a59ee-1e55-4df8-a429-2f0361367da8</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>22672ea6589631107f44271dc5726ea5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>c5a8f616-5d57-4a2d-9705-5bb691d9b954</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=22672ea6589631107f44271dc5726ea5"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>22672ea6589631107f44271dc5726ea5</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>a2672ea6589631107f44271dc5726ea9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value/>
+        <variable display_value="Timer relative duration operator">dca4105473031300b61e66476bf6a726</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>22672ea6589631107f44271dc5726ea5</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>aa672ea6589631107f44271dc5726ea9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>1970-01-01 00:00:00</value>
+        <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e^id=22672ea6589631107f44271dc5726ea5"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=22672ea6589631107f44271dc5726ea5"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=22672ea6589631107f44271dc5726ea5"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">6e672ea6589631107f44271dc5726ebc</block>
+        <comment>Disposal order is cancelled</comment>
+        <connected_to>67d88db8-e4e0-4ae0-978b-7a39c518a001</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>19</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>22672ea6589631107f44271dc5726ebd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>9a8a4fa8-8906-4b33-9288-0cb4d5df102d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=22672ea6589631107f44271dc5726ebd"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=22672ea6589631107f44271dc5726ebd"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=22672ea6589631107f44271dc5726ebd"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">62672ea6589631107f44271dc5726eaa</block>
+        <comment/>
+        <connected_to>d43a59ee-1e55-4df8-a429-2f0361367da8</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>13</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>a97ceb9a-1e64-4149-ae80-ad3e89caea1e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>26672ea6589631107f44271dc5726eaa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>6a3ec6c0-444f-476b-ab1e-025632c49680</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=26672ea6589631107f44271dc5726eaa"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=26672ea6589631107f44271dc5726eaa"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=26672ea6589631107f44271dc5726eaa"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">16672ea6589631107f44271dc5726e7e</block>
+        <comment>Schedule pickup task is created if Verify assets is closed complete</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:03</sys_created_on>
+        <sys_id>5e672ea6589631107f44271dc5726e7e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:03</sys_updated_on>
+        <ui_id>67d88db8-e4e0-4ae0-978b-7a39c518a001</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=5e672ea6589631107f44271dc5726e7e"/>
+    <sys_element_mapping action="delete_multiple" query="id=5e672ea6589631107f44271dc5726e7e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>5e672ea6589631107f44271dc5726e7e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:03</sys_created_on>
+        <sys_id>e2672ea6589631107f44271dc5726e82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{21759cd9-ab84-457f-be34-e1da3f20a42c.Record.state}}=3</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=5e672ea6589631107f44271dc5726e7e"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5e672ea6589631107f44271dc5726e7e"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">ae672ea6589631107f44271dc5726eb5</block>
+        <comment>Set Scheduling stage error</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>17</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>c7e28d1d-cdcb-4a0e-ade2-89d474fae8b1</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>62672ea6589631107f44271dc5726eb6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>d0e8bf94-5395-4dd3-8462-e7e027c14dc8</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=62672ea6589631107f44271dc5726eb6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>62672ea6589631107f44271dc5726eb6</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>62672ea6589631107f44271dc5726eba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>1970-01-01 00:00:00</value>
+        <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>62672ea6589631107f44271dc5726eb6</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>ae672ea6589631107f44271dc5726eb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value/>
+        <variable display_value="Timer relative duration operator">dca4105473031300b61e66476bf6a726</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e^id=62672ea6589631107f44271dc5726eb6"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=62672ea6589631107f44271dc5726eb6"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=62672ea6589631107f44271dc5726eb6"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">a6672ea6589631107f44271dc5726eba</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>18</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>c7e28d1d-cdcb-4a0e-ade2-89d474fae8b1</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>6a672ea6589631107f44271dc5726eba</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>07ac4006-4cf9-42f7-b108-09ef6b1a834d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=6a672ea6589631107f44271dc5726eba"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=6a672ea6589631107f44271dc5726eba"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6a672ea6589631107f44271dc5726eba"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">aa672ea6589631107f44271dc5726ea1</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>d43a59ee-1e55-4df8-a429-2f0361367da8</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>6e672ea6589631107f44271dc5726ea1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>60158a56-b7e1-4a9d-a5c3-cd86c03634a3</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=6e672ea6589631107f44271dc5726ea1"/>
+    <sys_element_mapping action="delete_multiple" query="id=6e672ea6589631107f44271dc5726ea1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>6e672ea6589631107f44271dc5726ea1</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>e6672ea6589631107f44271dc5726ea4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{c066e1b7-ead1-479e-98d7-91f1d9d27c74.parameter}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=6e672ea6589631107f44271dc5726ea1"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6e672ea6589631107f44271dc5726ea1"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">e6672ea6589631107f44271dc5726eb3</block>
+        <comment>Disposal order is cancelled</comment>
+        <connected_to>a97ceb9a-1e64-4149-ae80-ad3e89caea1e</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>16</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>67d88db8-e4e0-4ae0-978b-7a39c518a001</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>aa672ea6589631107f44271dc5726eb3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>c7e28d1d-cdcb-4a0e-ade2-89d474fae8b1</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=aa672ea6589631107f44271dc5726eb3"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=aa672ea6589631107f44271dc5726eb3"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=aa672ea6589631107f44271dc5726eb3"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">22672ea6589631107f44271dc5726e83</block>
+        <comment>Asset Departure task is created if Schedule Pickup is closed complete</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>67d88db8-e4e0-4ae0-978b-7a39c518a001</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:03</sys_created_on>
+        <sys_id>e2672ea6589631107f44271dc5726e83</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:03</sys_updated_on>
+        <ui_id>a97ceb9a-1e64-4149-ae80-ad3e89caea1e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e2672ea6589631107f44271dc5726e83"/>
+    <sys_element_mapping action="delete_multiple" query="id=e2672ea6589631107f44271dc5726e83"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>e2672ea6589631107f44271dc5726e83</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:03</sys_created_on>
+        <sys_id>2a672ea6589631107f44271dc5726e9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{2b1e4f13-4505-4f3c-9f0d-46c917da4938.Record.state}}=3</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e2672ea6589631107f44271dc5726e83"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e2672ea6589631107f44271dc5726e83"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">22672ea6589631107f44271dc5726eb1</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>15</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>6a3ec6c0-444f-476b-ab1e-025632c49680</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>e2672ea6589631107f44271dc5726eb1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>3712532c-bfd2-47de-a99a-b673ba87eff0</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e2672ea6589631107f44271dc5726eb1"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e2672ea6589631107f44271dc5726eb1"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e2672ea6589631107f44271dc5726eb1"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">26672ea6589631107f44271dc5726ebf</block>
+        <comment>Set Draft stage error</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>20</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>9a8a4fa8-8906-4b33-9288-0cb4d5df102d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>e6672ea6589631107f44271dc5726ebf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>d66fe200-82c8-4ec9-93d5-e8ce38b6ad6c</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e6672ea6589631107f44271dc5726ebf"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e6672ea6589631107f44271dc5726ebf</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>26672ea6589631107f44271dc5726ec3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value/>
+        <variable display_value="Timer relative duration operator">dca4105473031300b61e66476bf6a726</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e6672ea6589631107f44271dc5726ebf</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>e6672ea6589631107f44271dc5726ec3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>1970-01-01 00:00:00</value>
+        <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e^id=e6672ea6589631107f44271dc5726ebf"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e6672ea6589631107f44271dc5726ebf"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e6672ea6589631107f44271dc5726ebf"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">2a672ea6589631107f44271dc5726eac</block>
+        <comment>Set Transit stage error</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>6a3ec6c0-444f-476b-ab1e-025632c49680</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>ea672ea6589631107f44271dc5726eac</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>5bc42d79-9a0e-46c8-9108-9f63d22e976e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ea672ea6589631107f44271dc5726eac"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>ea672ea6589631107f44271dc5726eac</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>2a672ea6589631107f44271dc5726eb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value/>
+        <variable display_value="Timer relative duration operator">dca4105473031300b61e66476bf6a726</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>ea672ea6589631107f44271dc5726eac</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>ea672ea6589631107f44271dc5726eb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <value>1970-01-01 00:00:00</value>
+        <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e^id=ea672ea6589631107f44271dc5726eac"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ea672ea6589631107f44271dc5726eac"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ea672ea6589631107f44271dc5726eac"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">2e672ea6589631107f44271dc5726e9e</block>
+        <comment>Disposal order is cancelled if Asset Departure task is closed incomplete</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>a97ceb9a-1e64-4149-ae80-ad3e89caea1e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:03</sys_created_on>
+        <sys_id>ee672ea6589631107f44271dc5726e9e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>d43a59ee-1e55-4df8-a429-2f0361367da8</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ee672ea6589631107f44271dc5726e9e"/>
+    <sys_element_mapping action="delete_multiple" query="id=ee672ea6589631107f44271dc5726e9e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>ee672ea6589631107f44271dc5726e9e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>a6672ea6589631107f44271dc5726ea1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{690f228f-00d5-409c-99e9-817ed2173041.Record.state}}=3</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ee672ea6589631107f44271dc5726e9e"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ee672ea6589631107f44271dc5726e9e"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">2e672ea6589631107f44271dc5726ec3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Hardware Asset Disposal flow-Custom">de672ea6589631107f44271dc5726e5d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>21</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>9a8a4fa8-8906-4b33-9288-0cb4d5df102d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:04</sys_created_on>
+        <sys_id>ee672ea6589631107f44271dc5726ec3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:04</sys_updated_on>
+        <ui_id>da2d59bc-df13-4f6e-a002-9a6a7edac10a</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ee672ea6589631107f44271dc5726ec3"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ee672ea6589631107f44271dc5726ec3"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ee672ea6589631107f44271dc5726ec3"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=de672ea6589631107f44271dc5726e5d"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=de672ea6589631107f44271dc5726e5d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_de672ea6589631107f44271dc5726e5d^sys_idNOT IN52672ea6589631107f44271dc5726e7c,56672ea6589631107f44271dc5726e79"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_de672ea6589631107f44271dc5726e5d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:03</sys_created_on>
+        <sys_id>52672ea6589631107f44271dc5726e7c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HAM Configuration" source="x_snc_ham_configur">29942962589231107f44271dc5726ebc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:03</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_de672ea6589631107f44271dc5726e5d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-07 11:14:03</sys_created_on>
+        <sys_id>56672ea6589631107f44271dc5726e79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HAM Configuration" source="x_snc_ham_configur">29942962589231107f44271dc5726ebc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HAM Configuration">29942962589231107f44271dc5726ebc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 11:14:03</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_de672ea6589631107f44271dc5726e5d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_de672ea6589631107f44271dc5726e5d"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_de672ea6589631107f44271dc5726e5d"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=de672ea6589631107f44271dc5726e5d"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=de672ea6589631107f44271dc5726e5d"/>
+</record_update>

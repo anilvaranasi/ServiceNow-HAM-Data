@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e38aa9e6589231107f44271dc5726eef" extends="sys_import_set_row" label="Model Loader" max_length="40" name="x_snc_ham_configur_model_loader" type="collection">
+        <element attributes="import_attribute_name=cost" label="cost" max_length="15" name="u_cost" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Manufacturer" label="Manufacturer" max_length="40" name="u_manufacturer" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=model_name" label="model_name" max_length="40" name="u_model_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=model_number" label="model_number" max_length="40" name="u_model_number" type="string"/>
+    </element>
+</database>
